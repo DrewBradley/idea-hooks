@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.Form {
+  background-color: beige;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ideas {
+  background-color: lightgrey;
+  margin: auto;
+  padding: 10px;
+  max-width: 900px;
+  height: 750px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.Card {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightpink;
+  border: solid 3px lightsteelblue;
+  border-radius: 30px;
+}
+
+button {
+  cursor: pointer;
+}
