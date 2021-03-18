@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css';
 
-const Form = () => {
+const Form = ({addIdea}) => {
   const [title, setTitle] = useState()
   const [idea, setIdea] = useState()
 
@@ -29,7 +29,7 @@ const Form = () => {
         value={idea}
         onChange={handleIdea}
       />
-      <button>HOOKS!</button>
+      <button onClick={() => addIdea(title, idea)}>HOOKS!</button>
     </div>
   );
 }
