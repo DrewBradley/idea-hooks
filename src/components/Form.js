@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './App.css';
 
 const Form = ({addIdea}) => {
-  const [title, setTitle] = useState()
-  const [idea, setIdea] = useState()
+  const [title, setTitle] = useState("")
+  const [idea, setIdea] = useState("")
 
   const handleTitle = (event) => {
     setTitle(event.target.value);
@@ -11,6 +11,12 @@ const Form = ({addIdea}) => {
 
   const handleIdea = (event) => {
     setIdea(event.target.value);
+  }
+
+  const updateState = () => {
+    addIdea(title, idea)
+    setTitle("")
+    setIdea("")
   }
  
   return (
@@ -29,7 +35,7 @@ const Form = ({addIdea}) => {
         value={idea}
         onChange={handleIdea}
       />
-      <button onClick={() => addIdea(title, idea)}>HOOKS!</button>
+      <button onClick={() => updateState()}>HOOKS!</button>
     </div>
   );
 }
